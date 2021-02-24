@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function (\Illuminate\Http\Request $request) {
     $user=$request->user();
-    dd($user->can('deleteusers'));
+
+    $user->givePermissionTo(['edit','delete']);
 
 });
 

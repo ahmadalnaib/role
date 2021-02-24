@@ -6,9 +6,37 @@ namespace App\Permissions;
 
 use App\Models\Permission;
 use App\Models\Role;
+use Illuminate\Support\Arr;
 
 trait HasPermissionsTrait
 {
+
+  public function givePermissionTo(...$permissions)
+  {
+    $permissions=$this->getAllPermissions(Arr::flatten($permissions));
+
+    if($permissions === null)
+    {
+        return $this;
+    }
+
+    $this->permissions()->saveMany($permissions);
+    return  $this;
+  }
+
+
+    public function withdrawPermissionTo(...$permissions)
+    {
+        $permissions=$this->getAllPermissions(Arr::flatten($permissions));
+
+
+        $this->permissions()->detach($permissions);
+        return $this;
+
+    }
+
+
+
     public function hasRole(...$roles)
     {
         foreach ($roles as $role)
@@ -47,6 +75,11 @@ trait HasPermissionsTrait
     protected  function  hasPermission($permission)
     {
      return (bool) $this->permissions()->where('name',$permission->name)->count();
+    }
+
+    protected function getAllPermissions(array $permission)
+    {
+           return Permission::whereIn('name',$permission)->get();
     }
 
 
