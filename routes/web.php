@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function (\Illuminate\Http\Request $request) {
-    $user=$request->user();
+Route::get('/', function () {
 
-    $user->givePermissionTo(['edit','delete']);
+
+    return view('welcome');
 
 });
 

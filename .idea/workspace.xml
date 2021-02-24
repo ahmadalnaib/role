@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ea2119aa-233a-446a-8002-16aaef422aab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Permissions/HasPermissionsTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Permissions/HasPermissionsTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614157357326</updated>
       <workItem from="1614157360933" duration="4378000" />
-      <workItem from="1614163728894" duration="11499000" />
+      <workItem from="1614163728894" duration="14268000" />
     </task>
     <servers />
   </component>
